@@ -26,6 +26,22 @@ document.addEventListener('DOMContentLoaded', function () {
     caseCardsV2.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  // ---- Case story (Referenzen): fade in stats/text per case ----
+  var caseStoryItems = document.querySelectorAll('.case-story__fade');
+  if (caseStoryItems.length && 'IntersectionObserver' in window) {
+    var caseStoryObserver = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        obs.unobserve(el);
+        el.classList.add('is-visible');
+      });
+    }, { threshold: 0.25 });
+    caseStoryItems.forEach(function (el) { caseStoryObserver.observe(el); });
+  } else {
+    caseStoryItems.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
   // ---- Alternating timeline (Warum PANA Creator): reveal one after another ----
   var timelineItems = document.querySelectorAll('.alt-timeline__content');
   if (timelineItems.length && 'IntersectionObserver' in window) {
