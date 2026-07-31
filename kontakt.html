@@ -6,6 +6,8 @@
 <title>Kontakt – PANA Agency | Jetzt Kampagne anfragen</title>
 <meta name="description" content="Kontaktiere PANA Agency für deine nächste Sport-Creator-Kampagne. Kurzes Formular zu Budget, Zeitraum und Plattform – wir melden uns kurzfristig zurück.">
 <link rel="canonical" href="https://panaagency.com/kontakt.html">
+<link rel="alternate" hreflang="de" href="https://panaagency.com/kontakt.html">
+<link rel="alternate" hreflang="en" href="https://panaagency.com/kontakt-en.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PANA Agency">
 <meta property="og:title" content="Kontakt – PANA Agency">
@@ -24,6 +26,7 @@
       <li><a href="referenzen.html">Referenzen</a></li>
       <li><a href="creator.html">Creator</a></li>
       <li><a href="karriere.html">Karriere</a></li>
+      <li class="nav__lang"><a href="kontakt.html" class="is-active">DE</a><span>/</span><a href="kontakt-en.html">EN</a></li>
       <li><a href="kontakt.html" class="btn btn--primary">Jetzt anfragen</a></li>
     </ul>
     <button class="nav__toggle" aria-label="Menü öffnen">☰</button>
@@ -58,35 +61,36 @@
     <form class="form" action="https://formspree.io/f/xgogzzep" method="POST">
       <div class="form-row">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Name*</label>
           <input type="text" id="name" name="Name" required>
         </div>
         <div class="form-group">
-          <label for="email">E-Mail</label>
+          <label for="email">E-Mail*</label>
           <input type="email" id="email" name="E-Mail" required>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="company">Unternehmen</label>
-          <input type="text" id="company" name="Unternehmen">
+          <label for="company">Unternehmen*</label>
+          <input type="text" id="company" name="Unternehmen" required>
         </div>
         <div class="form-group">
           <label for="size">Unternehmensgröße</label>
           <select id="size" name="Unternehmensgröße">
             <option value="">Bitte wählen</option>
-            <option>Startup / 1–10 Mitarbeitende</option>
-            <option>KMU / 11–100 Mitarbeitende</option>
-            <option>Konzern / 100+ Mitarbeitende</option>
+            <option>1–10 Mitarbeitende</option>
+            <option>11–100 Mitarbeitende</option>
+            <option>101–1.000 Mitarbeitende</option>
+            <option>1.000+ Mitarbeitende</option>
           </select>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="budget">Budgetrahmen pro Monat</label>
-          <select id="budget" name="Budgetrahmen">
+          <label for="budget">Budgetrahmen pro Monat*</label>
+          <select id="budget" name="Budgetrahmen" required>
             <option value="">Bitte wählen</option>
             <option>5.000 € – 10.000 €</option>
             <option>10.000 € – 25.000 €</option>
@@ -110,7 +114,10 @@
         <textarea id="message" name="Nachricht" placeholder="Erzähl uns kurz von deinem Vorhaben und deinen Zielen."></textarea>
       </div>
 
+      <p style="font-size:13px;color:var(--gray-400);margin-bottom:16px">*Pflichtfeld</p>
+
       <button type="submit" class="btn btn--primary">Jetzt anfragen</button>
+      <p style="font-size:14px;color:var(--gray-400);margin-top:14px">Wir melden uns innerhalb von 2 Werktagen bei dir.</p>
     </form>
   </section>
 
