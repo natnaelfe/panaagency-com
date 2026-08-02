@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://panaagency.com/sitemap.xml
+Sitemap: https://pana-agency.de/sitemap.xml
