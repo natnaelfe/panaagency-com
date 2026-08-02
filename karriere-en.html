@@ -326,7 +326,7 @@
 
     <!-- Formspree: Endpoint bitte durch eigene Formspree-Form-ID ersetzen -->
     <!-- Formspree Endpoint aktiv: Karriere-Bewerbung -->
-    <form class="form form--single-column" action="https://formspree.io/f/mbdnkkdn" method="POST" enctype="multipart/form-data">
+    <form class="form form--single-column" action="https://formspree.io/f/mbdnkkdn" method="POST">
 
       <p class="form-section-label">Personal details</p>
       <div class="form-group">
@@ -357,13 +357,14 @@
         <textarea id="j-message" name="Nachricht" placeholder="Why are you a good fit for PANA?"></textarea>
       </div>
       <div class="form-group">
-        <label for="j-cv">CV <span style="color:var(--gray-400);font-weight:400">(optional, PDF, max. 10 MB)</span></label>
-        <input type="file" id="j-cv" name="Lebenslauf" accept=".pdf,.doc,.docx">
+        <label for="j-cv">Link to your CV <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
+        <input type="url" id="j-cv" name="Lebenslauf-Link" placeholder="e.g. Google Drive, Dropbox or OneDrive link">
       </div>
       <div class="form-group">
-        <label for="j-zeugnisse">Transcripts / certificates <span style="color:var(--gray-400);font-weight:400">(optional, PDF, max. 10 MB)</span></label>
-        <input type="file" id="j-zeugnisse" name="Zeugnisse" accept=".pdf,.doc,.docx">
+        <label for="j-zeugnisse">Link to transcripts / certificates <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
+        <input type="url" id="j-zeugnisse" name="Zeugnisse-Link" placeholder="e.g. Google Drive, Dropbox or OneDrive link">
       </div>
+      <p class="form-hint" style="margin-top:-16px">Upload the file to Google Drive/Dropbox/OneDrive, create a share link via right-click, and paste it here.</p>
 
       <p class="form-section-label">Studies <span style="color:var(--gray-400);font-weight:400;text-transform:none;letter-spacing:normal">(only relevant for internship/working student roles)</span></p>
       <div class="form-group">
