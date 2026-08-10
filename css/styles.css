@@ -237,7 +237,7 @@ strong, b { font-weight: var(--fw-bold); }
 @keyframes pana-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { display: flex; width: max-content; gap: 56px; align-items: center; animation: pana-marquee 26s linear infinite; }
 .marquee-mask:hover .marquee-track { animation-play-state: paused; }
-.marquee-logo { flex: none; width: 130px; height: 48px; display: flex; align-items: center; justify-content: center; }
+.marquee-logo { flex: none; width: 163px; height: 60px; display: flex; align-items: center; justify-content: center; }
 .marquee-logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; filter: grayscale(1); opacity: .85; }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
