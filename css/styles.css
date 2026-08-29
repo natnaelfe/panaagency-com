@@ -293,6 +293,7 @@ strong, b { font-weight: var(--fw-bold); }
 .float-contact a:hover { transform: translateY(-2px); opacity: .9; }
 .float-contact a.contact-mail { background: var(--pana-red); color: #fff; }
 .float-contact a.contact-ig { background: var(--gray-950); color: #fff; }
+.float-contact a.contact-wa { background: #25D366; color: #fff; }
 .float-contact svg { width: 22px; height: 22px; }
 @media (max-width: 600px) {
   .float-contact { right: 12px; gap: 10px; }
