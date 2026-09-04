@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  var GA_MEASUREMENT_ID = 'G-ZJ8N7HE354';
   var STORAGE_KEY = 'pana_cookie_consent';
   var BANNER_VERSION = 1;
   var REASK_AFTER_DAYS = 365;
@@ -65,24 +64,23 @@
     return data;
   }
 
-  function loadAnalytics() {
-    if (window.__paGaLoaded) return;
-    window.__paGaLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { window.dataLayer.push(arguments); }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true });
-  }
+  function gtag() { window.dataLayer.push(arguments); }
 
   function applyConsent(data) {
-    if (data && data.statistik) {
-      loadAnalytics();
-    }
+    // Signal the decision to GTM/Consent Mode instead of loading gtag.js ourselves.
+    // The GA4 tag itself now lives inside the GTM container and reads this state.
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || gtag;
+    gtag('consent', 'update', {
+      analytics_storage: data && data.statistik ? 'granted' : 'denied'
+    });
+
+    // Explicit, custom event GTM can trigger other tags (e.g. OpenAI pixel) on,
+    // independent of Google's own internal consent-update handling.
+    window.dataLayer.push({
+      event: 'pana_consent_update',
+      pana_statistics_consent: data && data.statistik ? 'granted' : 'denied'
+    });
   }
 
   function removeEl(id) {
