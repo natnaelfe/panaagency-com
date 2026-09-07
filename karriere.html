@@ -410,6 +410,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <input type="text" id="j-studiengang" name="Studiengang" placeholder="z.B. BWL, Goethe-Universität Frankfurt">
       </div>
       <div class="form-group">
+        <label for="j-pflichtpraktikum">Handelt es sich um ein Pflichtpraktikum?</label>
+        <select id="j-pflichtpraktikum" name="Pflichtpraktikum" required>
+          <option value="">Bitte wählen</option>
+          <option value="Ja, Pflichtpraktikum">Ja, Pflichtpraktikum</option>
+          <option value="Nein, freiwilliges Praktikum">Nein, freiwilliges Praktikum</option>
+          <option value="Trifft nicht zu">Trifft nicht zu</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label for="j-studienende">Voraussichtliches Studienende <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
         <input type="text" id="j-studienende" name="Studienende" placeholder="z.B. Sommersemester 2027">
       </div>
