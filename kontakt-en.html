@@ -85,8 +85,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section section--dark section--flash">
     <div class="container intro-centered">
       <span class="eyebrow">Contact</span>
-      <h1>Ready to work together?</h1>
-      <p class="hero__sub" style="color:#c7c7cc;margin-inline:auto">PANA Agency is a sport creator and marketing agency in the DACH region, we connect brands with the right football creators. Let's build your next campaign. Projects starting at €5,000/month. The more precise your details, the more targeted our advice.</p>
+      <h1>Let's plan your next <span class="heading-mixed__b">sport influencer campaign</span>.</h1>
+      <p class="hero__sub" style="color:#c7c7cc;margin-inline:auto">Looking for the right sport influencers for your brand? We handle matching, campaign management and reporting, all from a single source.</p>
 
       <div class="kontakt-trust">
         <span class="kontakt-trust__label">Already trusted by</span>
@@ -95,87 +95,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <img src="assets/logo-fussballmuseum.png" alt="German Football Museum" loading="lazy">
           <img src="assets/logo-soccerbeat.png" alt="SOCCERBEAT" loading="lazy">
         </div>
-        <div class="kontakt-trust__stats">
-          <span><strong>40+</strong> network</span>
-          <span><strong>8+</strong> years of experience in sport marketing</span>
-        </div>
+        <ul class="kontakt-trust__facts">
+          <li>40+ sport influencers in our network</li>
+          <li>8+ years of experience in sport marketing</li>
+          <li>4+ million views with a single World Cup campaign</li>
+          <li>Full service from matching to reporting</li>
+          <li>Sport &amp; football as a clear specialization</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="section container" style="padding-top:0">
-    <div class="form-note">
-      Alternatively, reach us directly by <a href="mailto:hallo@pana-agency.de">email</a> or on <a href="https://www.instagram.com/panaagency_/" target="_blank" rel="noopener">Instagram</a>.
+    <div style="max-width:700px;margin:0 auto">
+      <h2 style="margin-bottom:8px">Request a free initial call</h2>
+      <div class="form-note">
+        Alternatively, reach us directly by <a href="mailto:hallo@pana-agency.de">email</a> or on <a href="https://www.instagram.com/panaagency_/" target="_blank" rel="noopener">Instagram</a>.
+      </div>
+
+        <!-- Formspree Endpoint aktiv: Kontaktformular (Paul Hopson) -->
+        <form class="form" action="https://formspree.io/f/xgogzzep" method="POST">
+          <input type="hidden" name="_next" value="https://pana-agency.de/danke-en.html">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name*</label>
+              <input type="text" id="name" name="Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="E-Mail" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone number <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
+            <input type="tel" id="phone" name="Telefon">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Company*</label>
+              <input type="text" id="company" name="Unternehmen" required>
+            </div>
+            <div class="form-group">
+              <label for="role">Position / role <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
+              <input type="text" id="role" name="Position" placeholder="e.g. Marketing Manager">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="vorhaben">What would you like to do?*</label>
+            <select id="vorhaben" name="Vorhaben" required>
+              <option value="">Please select</option>
+              <option>Creator / influencer campaign</option>
+              <option>Sport marketing</option>
+              <option>Strategy consulting</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="budget">Planned budget*</label>
+              <select id="budget" name="Budgetrahmen" required>
+                <option value="">Please select</option>
+                <option>&lt; €5,000</option>
+                <option>€5,000 – €10,000</option>
+                <option>€10,000 – €25,000</option>
+                <option>€25,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="zeitraum">Timeframe <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
+              <select id="zeitraum" name="Zeitraum">
+                <option value="">Please select</option>
+                <option>ASAP</option>
+                <option>within 1–3 months</option>
+                <option>3–6 months</option>
+                <option>later</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="plattform">Platform <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
+            <select id="plattform" name="Plattform">
+              <option value="">Please select</option>
+              <option>Instagram</option>
+              <option>TikTok</option>
+              <option>YouTube</option>
+              <option>multiple</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">What's this about? <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
+            <textarea id="message" name="Nachricht" placeholder="Tell us briefly about your plans and goals."></textarea>
+          </div>
+
+          <p style="font-size:13px;color:var(--gray-400);margin-bottom:16px">*Required field</p>
+
+          <button type="submit" class="btn btn--primary">Request a free initial call</button>
+          <p style="font-size:14px;color:var(--gray-400);margin-top:14px">We'll get back to you within 2 business days.</p>
+        </form>
     </div>
-
-    <!-- Formspree Endpoint aktiv: Kontaktformular (Paul Hopson) -->
-    <form class="form" action="https://formspree.io/f/xgogzzep" method="POST">
-      <input type="hidden" name="_next" value="https://pana-agency.de/danke-en.html">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name*</label>
-          <input type="text" id="name" name="Name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email*</label>
-          <input type="email" id="email" name="E-Mail" required>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Phone number <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
-        <input type="tel" id="phone" name="Telefon">
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="company">Company*</label>
-          <input type="text" id="company" name="Unternehmen" required>
-        </div>
-        <div class="form-group">
-          <label for="size">Company size</label>
-          <select id="size" name="Unternehmensgröße">
-            <option value="">Please select</option>
-            <option>1–10 employees</option>
-            <option>11–100 employees</option>
-            <option>101–1,000 employees</option>
-            <option>1,000+ employees</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="budget">Monthly budget range*</label>
-          <select id="budget" name="Budgetrahmen" required>
-            <option value="">Please select</option>
-            <option>€5,000 – €10,000</option>
-            <option>€10,000 – €25,000</option>
-            <option>€25,000 – €50,000</option>
-            <option>€50,000+</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="zeitraum">Planned timeframe</label>
-          <input type="text" id="zeitraum" name="Zeitraum" placeholder="e.g. starting August, 3 months">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="plattform">Relevant platform(s)</label>
-        <input type="text" id="plattform" name="Plattform" placeholder="e.g. Instagram, TikTok, YouTube">
-      </div>
-
-      <div class="form-group">
-        <label for="message">What's this about? <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
-        <textarea id="message" name="Nachricht" placeholder="Tell us briefly about your plans and goals."></textarea>
-      </div>
-
-      <p style="font-size:13px;color:var(--gray-400);margin-bottom:16px">*Required field</p>
-
-      <button type="submit" class="btn btn--primary">Get in touch</button>
-      <p style="font-size:14px;color:var(--gray-400);margin-top:14px">We'll get back to you within 2 business days.</p>
-    </form>
   </section>
 
 </main>

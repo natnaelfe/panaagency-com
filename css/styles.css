@@ -822,12 +822,28 @@ body.page-dark .form-checkbox { color: var(--gray-300); }
 .kontakt-trust { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .kontakt-trust__label { font-size: var(--text-xs); color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); }
 .kontakt-trust__logos { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
-.kontakt-trust__logos img { height: 26px; width: auto; max-width: 110px; object-fit: contain; filter: brightness(0) invert(1); opacity: .8; }
+.kontakt-trust__logos img { height: 42px; width: auto; max-width: 170px; object-fit: contain; filter: brightness(0) invert(1); opacity: .8; }
 .kontakt-trust__more { font-size: 13px; color: var(--gray-500); font-style: italic; }
 .kontakt-trust__stats { display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; font-size: 14px; color: #c7c7cc; }
 .kontakt-trust__stats strong { color: #fff; font-weight: var(--fw-bold); }
 @media (max-width: 600px) {
   .kontakt-trust__logos { gap: 20px; }
-  .kontakt-trust__logos img { height: 20px; max-width: 90px; }
+  .kontakt-trust__logos img { height: 30px; max-width: 130px; }
   .kontakt-trust__stats { gap: 16px; font-size: 13px; }
+  .kontakt-trust__facts li { white-space: normal; text-align: center; }
 }
+/* ---------- Kontaktseite: zweispaltiges Layout mit Proof-Block ---------- */
+.kontakt-form-layout { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: start; }
+.kontakt-proof { background: var(--surface-tint); border-radius: var(--radius-md); padding: 28px 24px; position: sticky; top: 100px; }
+.kontakt-proof__title { font-size: 18px; text-transform: none; margin: 0 0 16px; color: var(--pana-ink); }
+body.page-dark .kontakt-proof__title { color: var(--pana-ink); }
+.kontakt-proof__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.kontakt-proof__list li { position: relative; padding-left: 26px; font-size: 14px; line-height: 1.5; color: var(--pana-ink); }
+.kontakt-proof__list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--pana-red); font-weight: var(--fw-bold); }
+@media (max-width: 900px) {
+  .kontakt-form-layout { grid-template-columns: 1fr; }
+  .kontakt-proof { position: static; order: -1; }
+}
+/* ---------- Kontaktseite: Kennzahlen-Bullets im Hero (heller Text auf dunklem Grund) ---------- */
+.kontakt-trust__facts { list-style: none; margin: 20px auto 0; padding: 0; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 28px; max-width: 900px; text-align: left; }
+.kontakt-trust__facts li { font-size: 14px; line-height: 1.5; color: #c7c7cc; white-space: nowrap; }
