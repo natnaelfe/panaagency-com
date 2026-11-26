@@ -193,6 +193,58 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ---- Case-Slider (Startseite) ----
+  document.querySelectorAll('[data-case-slider]').forEach(function (root) {
+    var track = root.querySelector('.case-slider__track');
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.case-slide'));
+    var prev = root.querySelector('[data-slider-prev]');
+    var next = root.querySelector('[data-slider-next]');
+    var dotsWrap = root.querySelector('.case-slider__dots');
+    var active = 0;
+    var dots = slides.map(function (_, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'case-slider__dot';
+      b.setAttribute('aria-label', 'Case ' + (i + 1));
+      b.addEventListener('click', function () { goTo(i); });
+      dotsWrap.appendChild(b);
+      return b;
+    });
+    function goTo(i) {
+      i = Math.max(0, Math.min(slides.length - 1, i));
+      track.scrollTo({ left: slides[i].offsetLeft, behavior: 'smooth' });
+    }
+    function update() {
+      var w = track.clientWidth || 1;
+      active = Math.round(track.scrollLeft / w);
+      active = Math.max(0, Math.min(slides.length - 1, active));
+      dots.forEach(function (d, i) { d.classList.toggle('is-active', i === active); });
+      if (prev) prev.disabled = active === 0;
+      if (next) next.disabled = active === slides.length - 1;
+      var cur = root.querySelector('[data-slider-current]');
+      if (cur) cur.textContent = String(active + 1);
+      track.style.height = slides[active].offsetHeight + 'px';
+      slides.forEach(function (sl, i) {
+        sl.querySelectorAll('video').forEach(function (v) {
+          if (i === active) { if (sl.querySelector('.phone-video.is-visible')) v.play().catch(function () {}); }
+          else { v.pause(); }
+        });
+      });
+    }
+    root.setAttribute('tabindex', '0');
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(active + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(active - 1); }
+    });
+    if (prev) prev.addEventListener('click', function () { goTo(active - 1); });
+    if (next) next.addEventListener('click', function () { goTo(active + 1); });
+    var t;
+    track.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(update, 60); });
+    window.addEventListener('resize', update);
+    window.addEventListener('load', update);
+    update();
+  });
+
   document.querySelectorAll('.accordion-item__head').forEach(function (head) {
     head.addEventListener('click', function () {
       var item = head.closest('.accordion-item');

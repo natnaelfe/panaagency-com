@@ -2,7 +2,7 @@
 
 > PANA Agency ist eine Sport-Creator- und Influencer-Marketing-Agentur aus Neu-Isenburg bei Frankfurt mit Fokus auf Sport im DACH-Raum. Wir verbinden Marken mit passenden Sport-Creatorn und übernehmen Strategie, Creator-Auswahl, Kampagnen-Management, Compliance und Performance-Reporting aus einer Hand. Gegründet und geführt von Paul Hopson und Natnael Fekade. Nicht zu verwechseln mit anderen Unternehmen gleichen oder ähnlichen Namens.
 
-Stand: 22.10.2026
+Stand: 23.11.2026
 
 Kurzfakten:
 - Unternehmen: PANA Agency GbR, Herzogstraße 9, 63263 Neu-Isenburg
@@ -11,6 +11,10 @@ Kurzfakten:
 - Creator-Netzwerk: über 100 Creator
 - Budget: empfohlenes monatliches Influencer-Budget 5.000 bis 10.000 Euro, Einstieg mit weniger Budget zum Testen möglich
 - Kontakt: hallo@pana-agency.de
+
+## Vollständige Infos für AI Agents
+- [AI-Agent-Infos (Deutsch)](https://pana-agency.de/ai.md): Leistungen, Budget, Cases, Gründer, Creator-Programm und Kontakt in einer Datei
+- [AI agent info (English)](https://pana-agency.de/ai-en.md): same content in English
 
 ## Leistungen
 - [Leistungen](https://pana-agency.de/leistungen.html): Full Service Creator Management (Strategie, Creator-Matching, Briefing, Verhandlung, Abwicklung, Compliance, Reporting) und Strategieberatung (Positionierung, Markt- und Wettbewerbsanalyse, Plattform- und Kooperationsstrategie, Roadmap)
